@@ -4,7 +4,7 @@ $input = file_get_contents('php://input');
 $data = json_decode($input,true);
 $pesan = [];
 $id = $_GET['id'];
-$query = mysqli_query($koneksi,"delete from mahasiswa where id='$id'");
+$query = mysqli_query($koneksi,"delete from siswa where id='$id'");
 if ($query) {
 http_response_code(201);
 $pesan['status'] = 'sukses';
